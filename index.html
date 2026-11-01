@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore 21 of the world's great mountains with Summit Atlas: a thoughtful field guide to mountain destinations, routes and stories."
+    />
+    <meta name="theme-color" content="#111a18" />
+    <title>Summit Atlas | Discover the World's Greatest Mountains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="home">
+    <header class="navbar"></header>
+    <p class="site-status" id="siteStatus" role="status" aria-live="polite"></p>
+    <main>
+      <section class="hero">
+        <div class="hero-content reveal">
+          <p class="eyebrow">A FIELD GUIDE TO THE HIGH PLACES</p>
+          <h1>Discover the World's<br />Greatest <span>Mountains.</span></h1>
+          <p class="hero-description">
+            Find your way into the world's great ranges. Explore remarkable
+            summits, the places and people around them, and the stories that
+            make every mountain unique.
+          </p>
+          <div class="hero-buttons">
+            <a href="destinations.html" class="btn btn-primary"
+              >Explore mountains <span aria-hidden="true">↗</span></a
+            ><a href="#regions" class="btn btn-outline"
+              >Find your region <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <form class="hero-search" id="mountainSearch" role="search">
+            <label for="heroSearch">Find a mountain</label>
+            <div>
+              <span aria-hidden="true">⌕</span
+              ><input
+                id="heroSearch"
+                name="q"
+                type="search"
+                placeholder="Search a mountain or country"
+                autocomplete="off"
+              /><button type="submit" aria-label="Search mountains">↗</button>
+            </div>
+          </form>
+          <div class="hero-footnote">
+            <span>21 iconic peaks</span><i></i><span>6 continents</span><i></i
+            ><span>One world to explore</span>
+          </div>
+        </div>
+        <div class="hero-caption">
+          <span class="caption-dot"></span> Karakoram Range · Pakistan
+        </div>
+        <div class="hero-index">01 <span>/</span> 06</div>
+      </section>
+
+      <section class="section featured-section">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">THE GREAT PEAKS</p>
+            <h2>Start with the<br />extraordinary.</h2>
+          </div>
+          <p class="section-intro">
+            From the high Himalaya to the far reaches of Patagonia, discover the
+            mountains that define their horizons.
+          </p>
+          <a href="destinations.html" class="text-link"
+            >Explore all mountains <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div
+          class="destination-grid featured-grid"
+          id="featuredMountains"
+          aria-live="polite"
+        >
+          <p class="loading-note">Opening the mountain field guide…</p>
+        </div>
+      </section>
+
+      <section class="popular-section">
+        <div
+          class="popular-image"
+          role="img"
+          aria-label="Mountain landscape in the European Alps"
+        ></div>
+        <div class="popular-copy reveal">
+          <p class="eyebrow">A WORLD OF WILD PLACES</p>
+          <h2>Find the place<br />that stays with you.</h2>
+          <p>
+            Some journeys are measured in miles. The ones that matter are
+            measured in moments: the first light on a summit, a quiet trail
+            through a valley, a welcome at the end of the day.
+          </p>
+          <a class="text-link" href="destinations.html"
+            >Explore popular destinations <span aria-hidden="true">↗</span></a
+          >
+          <div class="popular-note">
+            <strong>01 — 06</strong><span>Curated mountain regions</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section popular-peaks-section">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">A FEW PLACES TO BEGIN</p>
+            <h2>Popular destinations.</h2>
+          </div>
+          <a href="destinations.html" class="text-link">Browse the full atlas <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="destination-grid" id="popularMountains">
+          <p class="loading-note">Finding a few first destinations…</p>
+        </div>
+      </section>
+
+      <section class="section regions-section" id="regions">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">SIX CONTINENTS · COUNTLESS STORIES</p>
+            <h2>Choose your horizon.</h2>
+          </div>
+          <p class="section-intro">
+            Every range has its own character. Follow the landscape that calls
+            to you.
+          </p>
+        </div>
+        <div class="region-grid">
+          <a class="region-card reveal" href="destinations.html?region=himalayas"
+            ><span>01 / ASIA</span>
+            <h3>Himalayas</h3>
+            <p>High trails, ancient valleys and the world's tallest summits.</p>
+            <b aria-hidden="true">↗</b></a
+          >
+          <a class="region-card reveal" href="destinations.html?region=karakoram"
+            ><span>02 / ASIA</span>
+            <h3>Karakoram</h3>
+            <p>Glacier country beneath the immense walls of K2.</p>
+            <b aria-hidden="true">↗</b></a
+          >
+          <a
+            class="region-card reveal"
+            href="destinations.html?region=alps"
+            ><span>03 / EUROPE</span>
+            <h3>The Alps</h3>
+            <p>Classic ridgelines, mountain towns and alpine paths.</p>
+            <b aria-hidden="true">↗</b></a
+          >
+          <a
+            class="region-card reveal"
+            href="destinations.html?region=andes"
+            ><span>04 / SOUTH AMERICA</span>
+            <h3>The Andes</h3>
+            <p>A continental backbone of high desert and open sky.</p>
+            <b aria-hidden="true">↗</b></a
+          >
+          <a
+            class="region-card reveal"
+            href="destinations.html?region=africa"
+            ><span>05 / AFRICA</span>
+            <h3>African Mountains</h3>
+            <p>Volcanic highlands and rare landscapes above the plains.</p>
+            <b aria-hidden="true">↗</b></a
+          >
+          <a
+            class="region-card reveal"
+            href="destinations.html?region=north-america"
+            ><span>06 / NORTH AMERICA</span>
+            <h3>North American Mountains</h3>
+            <p>Big wilderness, glacial valleys and far-north peaks.</p>
+            <b aria-hidden="true">↗</b></a
+          >
+        </div>
+      </section>
+
+      <section class="why-section">
+        <div class="section why-layout">
+          <div class="why-heading reveal">
+            <p class="eyebrow">MORE THAN A SUMMIT</p>
+            <h2>Curiosity is our<br />compass.</h2>
+            <p>
+              Summit Atlas brings reliable mountain knowledge and thoughtful
+              travel inspiration together, so you can explore with a little more
+              context and a lot more wonder.
+            </p>
+            <a href="about.html" class="text-link"
+              >Our approach <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="why-list">
+            <article class="why-item reveal">
+              <span>01</span>
+              <div>
+                <h3>Grounded in place</h3>
+                <p>
+                  Learn about a mountain's geography, communities and cultural
+                  context—not just its summit.
+                </p>
+              </div>
+            </article>
+            <article class="why-item reveal">
+              <span>02</span>
+              <div>
+                <h3>Useful, honest detail</h3>
+                <p>
+                  Clear profiles, coordinates and seasonal notes, with
+                  conditions and uncertainties treated honestly.
+                </p>
+              </div>
+            </article>
+            <article class="why-item reveal">
+              <span>03</span>
+              <div>
+                <h3>Travel with care</h3>
+                <p>
+                  We champion local knowledge, respect for protected places and
+                  a leave-no-trace mindset.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-band">
+        <div class="stats-heading">
+          <p class="eyebrow">A WORLD OF POSSIBILITY</p>
+          <h2>One planet.<br />Higher perspectives.</h2>
+        </div>
+        <div class="stats-grid">
+          <div><strong>21</strong><span>Mountain profiles</span></div>
+          <div><strong>14</strong><span>Countries represented</span></div>
+          <div><strong>6</strong><span>Continents to explore</span></div>
+          <div><strong>17</strong><span>Mountain ranges</span></div>
+        </div>
+      </section>
+
+      <section class="section experiences-section">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">GO AT YOUR OWN PACE</p>
+            <h2>Ways into the wild.</h2>
+          </div>
+          <p class="section-intro">
+            Big objectives or slow mornings on the trail—there's more than one
+            way to find your mountain.
+          </p>
+        </div>
+        <div class="experience-grid">
+          <a href="tours.html" class="experience-card experience-climb reveal"
+            ><span>01 / TAKE IT HIGHER</span>
+            <h3>Mountain climbing</h3>
+            <b aria-hidden="true">↗</b></a
+          ><a href="tours.html" class="experience-card experience-trek reveal"
+            ><span>02 / FOLLOW THE TRAIL</span>
+            <h3>Trekking</h3>
+            <b aria-hidden="true">↗</b></a
+          ><a href="tours.html" class="experience-card experience-hike reveal"
+            ><span>03 / STEP OUTSIDE</span>
+            <h3>Hiking</h3>
+            <b aria-hidden="true">↗</b></a
+          ><a href="tours.html" class="experience-card experience-camp reveal"
+            ><span>04 / SLEEP UNDER STARS</span>
+            <h3>Camping</h3>
+            <b aria-hidden="true">↗</b></a
+          >
+        </div>
+      </section>
+
+      <section class="journal-preview-section">
+        <div class="section section-heading reveal">
+          <div>
+            <p class="eyebrow">NOTES FROM THE TRAIL</p>
+            <h2>Stories worth<br />taking with you.</h2>
+          </div>
+          <p class="section-intro">
+            Field notes, mountain histories and practical guides for the curious
+            traveler.
+          </p>
+          <a href="journal.html" class="text-link"
+            >Visit the journal <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="journal-preview-grid">
+          <article class="journal-preview reveal">
+            <img
+              src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=85"
+              alt="Hikers following a high-altitude mountain trail"
+              loading="lazy"
+            />
+            <p class="eyebrow">FIELD NOTES · 8 MIN READ</p>
+            <h3>How to Prepare for High-Altitude Trekking</h3>
+            <a href="journal.html?id=high-altitude-trekking" class="text-link"
+              >Read the story ↗</a
+            >
+          </article>
+          <article class="journal-preview reveal">
+            <img
+              src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85"
+              alt="A high mountain beneath a starry sky"
+              loading="lazy"
+            />
+            <p class="eyebrow">MOUNTAIN HISTORY · 7 MIN READ</p>
+            <h3>The History of K2</h3>
+            <a href="journal.html?id=history-of-k2" class="text-link"
+              >Read the story ↗</a
+            >
+          </article>
+          <article class="journal-preview reveal">
+            <img
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85"
+              alt="Snowy mountain ridges disappearing into the distance"
+              loading="lazy"
+            />
+            <p class="eyebrow">REGION GUIDE · 6 MIN READ</p>
+            <h3>Exploring the Himalayas</h3>
+            <a href="journal.html?id=exploring-himalayas" class="text-link"
+              >Read the story ↗</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="newsletter-section">
+        <div class="newsletter-copy">
+          <p class="eyebrow">THE SUMMIT ATLAS LETTER</p>
+          <h2>A little more mountain<br />in your inbox.</h2>
+          <p>
+            Occasional field notes, route inspiration and stories from the high
+            places. No noise, just a thoughtful dispatch.
+          </p>
+        </div>
+        <form id="newsletterForm" class="newsletter-form">
+          <label for="newsletterEmail">Your email address</label>
+          <div>
+            <input
+              id="newsletterEmail"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            /><button type="submit" aria-label="Check email address">
+              Check email <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p role="status" aria-live="polite">
+            Get occasional field notes and mountain stories.
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>

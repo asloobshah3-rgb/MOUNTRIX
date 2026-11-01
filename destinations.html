@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore 21 real mountains with country, elevation, range, season and mountain photographs."
+    />
+    <title>Mountain Destinations | Summit Atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="destinations">
+    <header class="navbar"></header>
+    <p class="site-status" id="siteStatus" role="status" aria-live="polite"></p>
+    <main>
+      <section class="page-hero destinations-hero">
+        <div class="reveal">
+          <p class="eyebrow">21 MOUNTAINS · SIX CONTINENTS</p>
+          <h1>Find your next<br /><span>high place.</span></h1>
+          <p>
+            A field guide to the world's great peaks. Search by name, country,
+            region or elevation, then follow the mountain to its story.
+          </p>
+        </div>
+      </section>
+      <section class="section explorer-section">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">THE MOUNTAIN ATLAS</p>
+            <h2>Explore the peaks.</h2>
+          </div>
+          <p class="section-intro">
+            Every profile includes location, elevation, geographic context and
+            links to learn more.
+          </p>
+        </div>
+        <form class="filter-panel" id="destinationFilters">
+          <div class="filter-field filter-search">
+            <label for="filterSearch">Mountain or country</label
+            ><input
+              id="filterSearch"
+              name="q"
+              type="search"
+              placeholder="Try Everest or Nepal"
+              autocomplete="off"
+            />
+          </div>
+          <div class="filter-field">
+            <label for="continentFilter">Continent</label
+            ><select id="continentFilter" name="continent">
+              <option value="">All continents</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="rangeFilter">Mountain range</label
+            ><select id="rangeFilter" name="range">
+              <option value="">All ranges</option>
+            </select>
+          </div>
+          <div class="filter-field elevation-fields">
+            <label for="minElevation">Elevation (metres)</label>
+            <div>
+              <input
+                id="minElevation"
+                name="minElevation"
+                type="number"
+                min="0"
+                max="9000"
+                step="100"
+                placeholder="Min"
+                aria-label="Minimum elevation in metres"
+              /><span>to</span
+              ><input
+                id="maxElevation"
+                name="maxElevation"
+                type="number"
+                min="0"
+                max="9000"
+                step="100"
+                placeholder="Max"
+                aria-label="Maximum elevation in metres"
+              />
+            </div>
+          </div>
+          <div class="filter-field">
+            <label for="sortFilter">Sort by height</label
+            ><select name="sort" id="sortFilter">
+              <option value="">Recommended</option>
+              <option value="high">Highest first</option>
+              <option value="low">Lowest first</option>
+            </select>
+          </div>
+          <button class="filter-reset" type="reset">
+            Reset filters <span aria-hidden="true">↺</span>
+          </button>
+        </form>
+        <div class="results-bar">
+          <p id="resultCount" aria-live="polite">Loading mountains…</p>
+          <span>Choose a peak to open its profile</span>
+        </div>
+        <div class="destination-grid explorer-grid" id="mountainResults">
+          <p class="loading-note">Loading the mountain field guide…</p>
+        </div>
+      </section>
+      <section class="explorer-note">
+        <p class="eyebrow">A NOTE ON MOUNTAIN CONDITIONS</p>
+        <p>
+          Elevation and location are geographic reference details. Route access,
+          weather, permits and safety conditions change; confirm current
+          information with local authorities and qualified guides before
+          planning a trip.
+        </p>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>

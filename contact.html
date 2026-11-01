@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Summit Atlas with questions, corrections or suggestions about mountain profiles and stories.">
+  <title>Contact Summit Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body data-page="contact">
+  <header class="navbar"></header><p class="site-status" id="siteStatus" role="status" aria-live="polite"></p>
+  <main>
+    <section class="page-hero contact-hero"><div class="reveal"><p class="eyebrow">QUESTIONS · CORRECTIONS · IDEAS</p><h1>Let's talk<br><span>mountains.</span></h1><p>Have a question about a profile, a correction to share or a story idea? We'd be glad to hear from you.</p></div></section>
+    <section class="section contact-layout"><div class="contact-copy reveal"><p class="eyebrow">GET IN TOUCH</p><h2>Start a conversation.</h2><p>Summit Atlas is an independent mountain information project. Share what is on your mind, or explore the frequently asked questions below.</p><div class="contact-detail"><span aria-hidden="true">↗</span><div><strong>Mountain knowledge</strong><p>Our profiles bring together geographic references, mountain history and practical context.</p></div></div><div class="contact-detail"><span aria-hidden="true">✦</span><div><strong>Travel and safety</strong><p>Mountain conditions change; consult current local forecasts and qualified professionals before a trip.</p></div></div><div class="contact-detail"><span aria-hidden="true">◎</span><div><strong>Explore at your pace</strong><p>Start with a peak, range or story that catches your curiosity.</p></div></div></div>
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row"><div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="How should we address you?" minlength="2" required></div><div><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div></div>
+        <label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What would you like to discuss?" minlength="3" required>
+        <label for="message">Your message</label><textarea id="message" name="message" rows="6" placeholder="Share a little context…" minlength="10" required></textarea>
+        <button type="submit" class="btn btn-primary">Validate details <span aria-hidden="true">↗</span></button>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="faq-section" id="faq"><div class="section"><div class="section-heading reveal"><div><p class="eyebrow">GOOD TO KNOW</p><h2>Frequently asked.</h2></div></div><div class="faq-list"><details><summary>Can Summit Atlas arrange a guided trip?</summary><p>No. Summit Atlas is an information and inspiration website, not a tour operator. Contact a licensed local guide or established operator for trip planning and current access advice.</p></details><details><summary>Is the weather information a mountain forecast?</summary><p>No. The detail page shows current Open-Meteo data for the summit coordinates. It may not represent conditions on a route and is not suitable for safety decisions. Check authoritative local mountain forecasts before travel.</p></details><details><summary>What sources support the mountain profiles?</summary><p>Summit elevations, coordinates, histories and route context are drawn from established geographic and mountain references. Values and route details may change; verify critical information against current local sources.</p></details><details><summary>Where do the mountain photographs come from?</summary><p>Mountain profile photographs are retrieved from Wikipedia mountain articles, with gallery image credits linking to Wikimedia Commons. If the photo service is unavailable, an illustrated local fallback appears. Other editorial images are served by Unsplash.</p></details></div></div></section>
+  </main><footer class="footer"></footer>
+</body>
+</html>
