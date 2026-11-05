@@ -312,7 +312,7 @@ function setupShell() {
         : current;
   const header = document.querySelector(".navbar");
   if (header) {
-    header.innerHTML = `<a class="logo" href="index.html" aria-label="Summit Atlas home">SUMMIT<span>ATLAS</span><i>.</i></a>
+    header.innerHTML = `<a class="logo" href="index.html" aria-label="Mountrix home">MOUNT<span>RIX</span><i>.</i></a>
       <nav class="nav-links" id="primaryNav" aria-label="Main navigation">${navItems.map(([label, href]) => `<a href="${href}"${activePage === href ? ' class="active" aria-current="page"' : ""}>${label}</a>`).join("")}</nav>
       <div class="nav-actions">
         <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span></button>
@@ -328,10 +328,10 @@ function setupShell() {
   const footer = document.querySelector(".footer");
   if (footer) {
     footer.innerHTML = `<div class="footer-main">
-        <div class="footer-brand"><a class="logo" href="index.html">SUMMIT<span>ATLAS</span><i>.</i></a><p>Mountain profiles, regional context and practical reading for people who want to know a place before they go.</p><p class="social-note">Independent field guide · General information, not a tour operator</p></div>
+        <div class="footer-brand"><a class="logo" href="index.html">MOUNT<span>RIX</span><i>.</i></a><p>Mountain profiles, regional context and practical reading for people who want to know a place before they go.</p><p class="social-note">Independent field guide · General information, not a tour operator</p></div>
         <div><h2>Explore</h2><a href="destinations.html">All mountains</a><a href="tours.html">Adventure experiences</a><a href="gallery.html">Photo gallery</a><a href="journal.html">Travel journal</a><a href="favorites.html">Your favorites</a><a href="reviews.html">Reviews</a></div>
-        <div><h2>Summit Atlas</h2><a href="about.html">About this guide</a><a href="contact.html">Contact</a><a href="contact.html#faq">Common questions</a><a href="terms.html">Terms</a><a href="terms.html#privacy">Privacy information</a><a href="login.html">Log in</a><a href="sign-up.html">Create an account</a></div>
-      </div><div class="footer-bottom"><span>© <span class="year">${new Date().getFullYear()}</span> Summit Atlas</span><span>Learn about a place. Travel with care.</span></div>`;
+        <div><h2>Mountrix</h2><a href="about.html">About this guide</a><a href="contact.html">Contact</a><a href="contact.html#faq">Common questions</a><a href="terms.html">Terms</a><a href="terms.html#privacy">Privacy information</a><a href="login.html">Log in</a><a href="sign-up.html">Create an account</a></div>
+      </div><div class="footer-bottom"><span>© <span class="year">${new Date().getFullYear()}</span> Mountrix</span><span>Learn about a place. Travel with care.</span></div>`;
   }
   if (header) {
     const button = header.querySelector(".menu-toggle");
@@ -1472,7 +1472,7 @@ function renderTourDetails() {
         <div class="map-card"><p class="eyebrow">FIND THE MOUNTAIN</p><iframe title="Map showing ${mountain.name}" src="https://maps.google.com/maps?q=${mountain.latitude},${mountain.longitude}&z=7&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a class="text-link" href="${mountain.maps}" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div>
       </aside></div>
     <div class="tour-gallery-wrap"><div class="section-heading"><div><p class="eyebrow">MOUNTAIN PHOTO GALLERY</p><h3>Get to know ${mountain.name}.</h3></div></div><p class="gallery-photo-count" data-gallery-count="${mountain.id}" role="status">Loading mountain-specific photographs and source details…</p><div class="detail-gallery">${Array.from({ length: 7 }, (_, index) => `<figure hidden><a href="${FALLBACK_IMAGE}" target="_blank" rel="noopener noreferrer"><img src="${FALLBACK_IMAGE}" data-mountain-photo="${mountain.id}" data-photo-index="${index}" data-gallery-photo="${mountain.id}" alt="${mountain.name} gallery photograph ${index + 1}" loading="lazy"></a><figcaption>Wikimedia Commons photograph</figcaption></figure>`).join("")}</div></div>`;
-  document.title = `${getTourTitle(mountain)} | Summit Atlas Tours`;
+  document.title = `${getTourTitle(mountain)} | Mountrix Tours`;
   hydrateMountainPhotos(mountain, section);
   if (location.hash === "#tour-detail")
     requestAnimationFrame(() =>
@@ -1647,7 +1647,7 @@ function renderMountainDetail() {
     root.innerHTML = `<section class="page-hero"><div><p class="eyebrow">MOUNTAIN NOT FOUND</p><h1>Let's find another summit.</h1><p>This mountain isn't in our guide yet.</p><a class="btn btn-primary" href="destinations.html">Browse all mountains</a></div></section>`;
     return;
   }
-  document.title = `${mountain.name} | Summit Atlas`;
+  document.title = `${mountain.name} | Mountrix`;
   root.innerHTML = `<section class="mountain-detail-hero">
       <img class="detail-hero-photo" src="${FALLBACK_IMAGE}" data-mountain-photo="${mountain.id}" alt="Illustrated mountain placeholder for ${mountain.name}">
       <div class="detail-hero-shade"></div><div class="detail-hero-copy"><a class="back-link" href="destinations.html">← All mountains</a><p class="eyebrow">${mountain.continent} · ${mountain.range}</p><h1>${mountain.name}</h1><p>${mountain.country} <span>·</span> ${Number(mountain.elevation).toLocaleString()} m</p><div class="detail-actions">${favoriteButton(mountain)}<a class="btn btn-outline" href="${mountain.maps}" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div><p class="photo-credit" data-photo-credit="${mountain.id}">Photo: Wikimedia Commons</p></div>
@@ -1747,7 +1747,7 @@ function renderJournal() {
       root.innerHTML = `<div class="empty-state"><h2>Story not found</h2><a class="text-link" href="journal.html">Back to the journal</a></div>`;
       return;
     }
-    document.title = `${article.title} | Summit Atlas Journal`;
+    document.title = `${article.title} | Mountrix Journal`;
     root.innerHTML = `<article class="journal-article"><a class="back-link" href="journal.html">← All stories</a><header class="journal-article-heading"><p class="eyebrow">${article.category}</p><h1>${article.title}</h1><p class="lead">${article.summary}</p></header><img class="journal-article-image" src="${article.image}" alt="${article.alt}"><div class="article-body">${article.content.map((paragraph) => `<p>${paragraph}</p>`).join("")}<p class="article-disclaimer">Mountain conditions and access change. Seek current local guidance and qualified professional advice before undertaking a mountain journey.</p><a class="btn btn-primary" href="destinations.html">Explore mountain profiles ↗</a></div></article>`;
     return;
   }
