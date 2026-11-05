@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Read illustrative Summit Atlas sample reviews or leave feedback saved on this device."
+    />
+    <title>Reviews | Summit Atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="reviews">
+    <header class="navbar"></header>
+    <p class="site-status" id="siteStatus" role="status" aria-live="polite"></p>
+    <main>
+      <section class="page-hero reviews-hero">
+        <div class="reveal">
+          <p class="eyebrow">TRAVEL NOTES · SHARED WITH CARE</p>
+          <h1>Every journey<br />has a <span>story.</span></h1>
+          <p>
+            These sample reviews are illustrative, not verified customer
+            testimonials. Your own review stays in this browser.
+          </p>
+        </div>
+      </section>
+      <section class="section reviews-section">
+        <div class="review-summary" data-review-summary></div>
+        <p class="sample-disclaimer">
+          Sample content — the reviews below are illustrative and are not
+          verified customer testimonials.
+        </p>
+        <div class="review-grid" id="reviewsGrid"></div>
+      </section>
+      <section class="review-form-section">
+        <div class="review-form-copy">
+          <p class="eyebrow">YOUR FIELD NOTES</p>
+          <h2>Share your experience.</h2>
+          <p>
+            Tell us what you thought of a mountain destination or tour idea.
+            Your review is saved in this browser only.
+          </p>
+        </div>
+        <form class="review-form" id="reviewForm" method="post">
+          <label for="reviewName">Your name</label>
+          <input
+            id="reviewName"
+            name="name"
+            type="text"
+            autocomplete="name"
+            minlength="2"
+            maxlength="60"
+            required
+          />
+          <label for="reviewRating">Rating</label>
+          <select id="reviewRating" name="rating" required>
+            <option value="">Choose a rating</option>
+            <option value="5">5 — Excellent</option>
+            <option value="4">4 — Very good</option>
+            <option value="3">3 — Good</option>
+            <option value="2">2 — Fair</option>
+            <option value="1">1 — Needs improvement</option>
+          </select>
+          <label for="reviewMessage">Your experience</label>
+          <textarea
+            id="reviewMessage"
+            name="message"
+            rows="5"
+            minlength="20"
+            maxlength="1200"
+            required
+            placeholder="What stood out about the destination or tour?"
+          ></textarea>
+          <button type="submit" class="btn btn-primary">
+            Save review <span aria-hidden="true">↗</span>
+          </button>
+          <p
+            class="review-form-status"
+            id="reviewFormStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>

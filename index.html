@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Explore 21 of the world's great mountains with Summit Atlas: a thoughtful field guide to mountain destinations, routes and stories."
+      content="Explore mountain profiles, regional context and field notes in the Summit Atlas guide to the world's high places."
     />
     <meta name="theme-color" content="#111a18" />
-    <title>Summit Atlas | Discover the World's Greatest Mountains</title>
+    <title>Summit Atlas | A Field Guide to the World's Mountains</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -23,13 +23,39 @@
     <p class="site-status" id="siteStatus" role="status" aria-live="polite"></p>
     <main>
       <section class="hero">
+        <video
+          class="hero-video"
+          id="heroVideo"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="https://images.pexels.com/videos/32200825/altitude-andean-region-ascent-beautiful-sunrise-32200825.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200"
+          preload="metadata"
+          aria-label="Mountaineers at Huayna Potosí summit at sunrise"
+        >
+          <source
+            src="https://videos.pexels.com/video-files/32200825/13733108_1920_1080_60fps.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support HTML video.
+        </video>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-video-credit">
+          <a
+            href="https://www.pexels.com/video/mountaineers-at-huayna-potosi-summit-at-sunrise-32200825/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Mountaineers at Huayna Potosí · Florian Delée / Pexels</a
+          >
+        </div>
         <div class="hero-content reveal">
           <p class="eyebrow">A FIELD GUIDE TO THE HIGH PLACES</p>
-          <h1>Discover the World's<br />Greatest <span>Mountains.</span></h1>
+          <h1>Get to know the<br />world's great <span>mountains.</span></h1>
           <p class="hero-description">
-            Find your way into the world's great ranges. Explore remarkable
-            summits, the places and people around them, and the stories that
-            make every mountain unique.
+            Start with a peak, then follow its landscape, history and
+            surrounding communities. Find useful mountain profiles and field
+            notes in one place.
           </p>
           <div class="hero-buttons">
             <a href="destinations.html" class="btn btn-primary"
@@ -38,7 +64,12 @@
               >Find your region <span aria-hidden="true">↓</span></a
             >
           </div>
-          <form class="hero-search" id="mountainSearch" role="search">
+          <form
+            class="hero-search"
+            id="mountainSearch"
+            role="search"
+            method="get"
+          >
             <label for="heroSearch">Find a mountain</label>
             <div>
               <span aria-hidden="true">⌕</span
@@ -52,12 +83,12 @@
             </div>
           </form>
           <div class="hero-footnote">
-            <span>21 iconic peaks</span><i></i><span>6 continents</span><i></i
-            ><span>One world to explore</span>
+            <span>21 mountain profiles</span><i></i><span>14 countries</span
+            ><i></i><span>6 continents</span>
           </div>
         </div>
         <div class="hero-caption">
-          <span class="caption-dot"></span> Karakoram Range · Pakistan
+          <span class="caption-dot"></span> Huayna Potosí · Bolivia
         </div>
         <div class="hero-index">01 <span>/</span> 06</div>
       </section>
@@ -66,11 +97,11 @@
         <div class="section-heading reveal">
           <div>
             <p class="eyebrow">THE GREAT PEAKS</p>
-            <h2>Start with the<br />extraordinary.</h2>
+            <h2>A few places<br />to begin.</h2>
           </div>
           <p class="section-intro">
-            From the high Himalaya to the far reaches of Patagonia, discover the
-            mountains that define their horizons.
+            Browse a first selection of peaks, from Himalayan giants to the
+            southern Andes.
           </p>
           <a href="destinations.html" class="text-link"
             >Explore all mountains <span aria-hidden="true">↗</span></a
@@ -93,17 +124,16 @@
         ></div>
         <div class="popular-copy reveal">
           <p class="eyebrow">A WORLD OF WILD PLACES</p>
-          <h2>Find the place<br />that stays with you.</h2>
+          <h2>Every range has<br />its own character.</h2>
           <p>
-            Some journeys are measured in miles. The ones that matter are
-            measured in moments: the first light on a summit, a quiet trail
-            through a valley, a welcome at the end of the day.
+            A mountain is more than its highest point. Valleys, weather,
+            communities and the routes between them all shape a visit.
           </p>
           <a class="text-link" href="destinations.html"
-            >Explore popular destinations <span aria-hidden="true">↗</span></a
+            >Browse the mountain profiles <span aria-hidden="true">↗</span></a
           >
           <div class="popular-note">
-            <strong>01 — 06</strong><span>Curated mountain regions</span>
+            <strong>01 — 06</strong><span>Mountain regions in this guide</span>
           </div>
         </div>
       </section>
@@ -114,7 +144,9 @@
             <p class="eyebrow">A FEW PLACES TO BEGIN</p>
             <h2>Popular destinations.</h2>
           </div>
-          <a href="destinations.html" class="text-link">Browse the full atlas <span aria-hidden="true">↗</span></a>
+          <a href="destinations.html" class="text-link"
+            >Browse the full atlas <span aria-hidden="true">↗</span></a
+          >
         </div>
         <div class="destination-grid" id="popularMountains">
           <p class="loading-note">Finding a few first destinations…</p>
@@ -125,48 +157,53 @@
         <div class="section-heading reveal">
           <div>
             <p class="eyebrow">SIX CONTINENTS · COUNTLESS STORIES</p>
-            <h2>Choose your horizon.</h2>
+            <h2>Where would you like to start?</h2>
           </div>
           <p class="section-intro">
-            Every range has its own character. Follow the landscape that calls
-            to you.
+            Compare landscapes across six regions, from glaciated ranges to
+            volcanic highlands.
           </p>
         </div>
         <div class="region-grid">
-          <a class="region-card reveal" href="destinations.html?region=himalayas"
+          <a
+            class="region-card reveal"
+            href="destinations.html?region=himalayas"
             ><span>01 / ASIA</span>
             <h3>Himalayas</h3>
-            <p>High trails, ancient valleys and the world's tallest summits.</p>
+            <p>
+              High Himalayan valleys, glacier-fed rivers and routes across
+              several countries.
+            </p>
             <b aria-hidden="true">↗</b></a
           >
-          <a class="region-card reveal" href="destinations.html?region=karakoram"
+          <a
+            class="region-card reveal"
+            href="destinations.html?region=karakoram"
             ><span>02 / ASIA</span>
             <h3>Karakoram</h3>
-            <p>Glacier country beneath the immense walls of K2.</p>
+            <p>Large glaciers and steep granite peaks, including K2.</p>
             <b aria-hidden="true">↗</b></a
           >
-          <a
-            class="region-card reveal"
-            href="destinations.html?region=alps"
+          <a class="region-card reveal" href="destinations.html?region=alps"
             ><span>03 / EUROPE</span>
             <h3>The Alps</h3>
-            <p>Classic ridgelines, mountain towns and alpine paths.</p>
+            <p>
+              Well-known alpine routes, high passes and mountain communities.
+            </p>
             <b aria-hidden="true">↗</b></a
           >
-          <a
-            class="region-card reveal"
-            href="destinations.html?region=andes"
+          <a class="region-card reveal" href="destinations.html?region=andes"
             ><span>04 / SOUTH AMERICA</span>
             <h3>The Andes</h3>
-            <p>A continental backbone of high desert and open sky.</p>
+            <p>
+              A long chain of ranges, from tropical valleys to the high Andes.
+            </p>
             <b aria-hidden="true">↗</b></a
           >
-          <a
-            class="region-card reveal"
-            href="destinations.html?region=africa"
+          <a class="region-card reveal" href="destinations.html?region=africa"
             ><span>05 / AFRICA</span>
             <h3>African Mountains</h3>
-            <p>Volcanic highlands and rare landscapes above the plains.</p>
+            <p>Volcanic peaks and highland routes, including Kilimanjaro.</p>
             <b aria-hidden="true">↗</b></a
           >
           <a
@@ -174,7 +211,9 @@
             href="destinations.html?region=north-america"
             ><span>06 / NORTH AMERICA</span>
             <h3>North American Mountains</h3>
-            <p>Big wilderness, glacial valleys and far-north peaks.</p>
+            <p>
+              Glacier-carved valleys and high peaks across a broad continent.
+            </p>
             <b aria-hidden="true">↗</b></a
           >
         </div>
@@ -184,14 +223,14 @@
         <div class="section why-layout">
           <div class="why-heading reveal">
             <p class="eyebrow">MORE THAN A SUMMIT</p>
-            <h2>Curiosity is our<br />compass.</h2>
+            <h2>Start with the<br />place itself.</h2>
             <p>
-              Summit Atlas brings reliable mountain knowledge and thoughtful
-              travel inspiration together, so you can explore with a little more
-              context and a lot more wonder.
+              A summit makes more sense when you know what surrounds it. Our
+              profiles bring geography, local context and practical notes
+              together.
             </p>
             <a href="about.html" class="text-link"
-              >Our approach <span aria-hidden="true">↗</span></a
+              >How we work <span aria-hidden="true">↗</span></a
             >
           </div>
           <div class="why-list">
@@ -231,8 +270,8 @@
 
       <section class="stats-band">
         <div class="stats-heading">
-          <p class="eyebrow">A WORLD OF POSSIBILITY</p>
-          <h2>One planet.<br />Higher perspectives.</h2>
+          <p class="eyebrow">THE ATLAS AT A GLANCE</p>
+          <h2>A growing guide<br />to mountain places.</h2>
         </div>
         <div class="stats-grid">
           <div><strong>21</strong><span>Mountain profiles</span></div>
@@ -246,11 +285,11 @@
         <div class="section-heading reveal">
           <div>
             <p class="eyebrow">GO AT YOUR OWN PACE</p>
-            <h2>Ways into the wild.</h2>
+            <h2>Choose your kind of day.</h2>
           </div>
           <p class="section-intro">
-            Big objectives or slow mornings on the trail—there's more than one
-            way to find your mountain.
+            Not every mountain trip is a summit bid. Walking, trekking and
+            climbing each ask for different preparation.
           </p>
         </div>
         <div class="experience-grid">
@@ -278,11 +317,11 @@
         <div class="section section-heading reveal">
           <div>
             <p class="eyebrow">NOTES FROM THE TRAIL</p>
-            <h2>Stories worth<br />taking with you.</h2>
+            <h2>Notes for the<br />mountain-minded.</h2>
           </div>
           <p class="section-intro">
-            Field notes, mountain histories and practical guides for the curious
-            traveler.
+            Read about mountain history, regional landscapes and preparation for
+            time at altitude.
           </p>
           <a href="journal.html" class="text-link"
             >Visit the journal <span aria-hidden="true">↗</span></a
@@ -328,16 +367,34 @@
         </div>
       </section>
 
+      <section class="section home-reviews-section">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">NOTES FROM THE TRAIL</p>
+            <h2>Notes from<br />other readers.</h2>
+          </div>
+          <p class="section-intro">
+            Sample reviews are illustrative, not verified customer
+            testimonials. Reviews you submit stay in your browser.
+          </p>
+          <a href="reviews.html" class="text-link"
+            >Read and share reviews <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="review-summary" data-review-summary></div>
+        <div class="review-grid" id="homeReviews"></div>
+      </section>
+
       <section class="newsletter-section">
         <div class="newsletter-copy">
           <p class="eyebrow">THE SUMMIT ATLAS LETTER</p>
-          <h2>A little more mountain<br />in your inbox.</h2>
+          <h2>Field notes, now<br />and then.</h2>
           <p>
-            Occasional field notes, route inspiration and stories from the high
-            places. No noise, just a thoughtful dispatch.
+            A few mountain stories and reading suggestions, sent occasionally.
+            No weekly schedule to keep up with.
           </p>
         </div>
-        <form id="newsletterForm" class="newsletter-form">
+        <form id="newsletterForm" class="newsletter-form" method="post">
           <label for="newsletterEmail">Your email address</label>
           <div>
             <input
@@ -347,11 +404,11 @@
               placeholder="you@example.com"
               required
             /><button type="submit" aria-label="Check email address">
-              Check email <span aria-hidden="true">↗</span>
+              Check address <span aria-hidden="true">↗</span>
             </button>
           </div>
           <p role="status" aria-live="polite">
-            Get occasional field notes and mountain stories.
+            Subscription signup is not connected yet.
           </p>
         </form>
       </section>

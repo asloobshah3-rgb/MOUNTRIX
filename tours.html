@@ -1,87 +1,263 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore indicative mountain journeys across the same 21 mountain destinations featured in the Summit Atlas field guide.">
-  <meta name="theme-color" content="#111a18">
-  <title>Mountain Tours &amp; Adventure Ideas | Summit Atlas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body data-page="tours">
-  <header class="navbar"></header>
-  <p class="site-status" id="siteStatus" role="status" aria-live="polite"></p>
-  <main>
-    <section class="page-hero tours-hero">
-      <div class="reveal">
-        <p class="eyebrow">JOURNEYS FOR THE MOUNTAIN CURIOUS</p>
-        <h1>Discover Your Next<br><span>Mountain Adventure</span></h1>
-        <p>Explore breathtaking destinations, discover unforgettable journeys, and find your next adventure with Summit Atlas.</p>
-        <a class="btn btn-primary tours-hero-cta" href="#tourCollection">Explore Our Tours <span aria-hidden="true">↘</span></a>
-        <p class="tour-hero-note">21 mountain destinations · Indicative itineraries · Plan with local experts</p>
-      </div>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore indicative mountain journeys across the same 21 mountain destinations featured in the Summit Atlas field guide."
+    />
+    <meta name="theme-color" content="#111a18" />
+    <title>Mountain Tours &amp; Adventure Ideas | Summit Atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="tours">
+    <header class="navbar"></header>
+    <p class="site-status" id="siteStatus" role="status" aria-live="polite"></p>
+    <main>
+      <section class="page-hero tours-hero">
+        <div class="reveal">
+          <p class="eyebrow">JOURNEYS FOR THE MOUNTAIN CURIOUS</p>
+          <h1>Discover Your Next<br /><span>Mountain Adventure</span></h1>
+          <p>
+            Use these suggested itineraries as a starting point for research.
+            They are planning estimates, not trips you can book through Summit
+            Atlas.
+          </p>
+          <a class="btn btn-primary tours-hero-cta" href="#tourCollection"
+            >Explore Our Tours <span aria-hidden="true">↘</span></a
+          >
+          <p class="tour-hero-note">
+            21 mountain destinations · Indicative itineraries · Plan with local
+            experts
+          </p>
+        </div>
+      </section>
 
-    <section class="section tour-collection" id="tourCollection">
-      <div class="section-heading reveal">
-        <div><p class="eyebrow">YOUR NEXT HIGH PLACE</p><h2>Journeys shaped by<br>the mountains.</h2></div>
-        <p class="section-intro">Browse planning ideas for every mountain in our destinations guide. Durations and difficulty are estimates—not confirmed trips, bookings or operator offerings.</p>
-      </div>
-      <form class="filter-panel tour-filter-panel" id="tourFilters" role="search">
-        <div class="filter-field filter-search"><label for="tourSearch">Search mountain</label><input id="tourSearch" name="q" type="search" placeholder="Mountain name or country" autocomplete="off"></div>
-        <div class="filter-field"><label for="tourCountry">Country</label><select id="tourCountry" name="country"><option value="">All countries</option></select></div>
-        <div class="filter-field"><label for="tourRegion">Region</label><select id="tourRegion" name="region"><option value="">All regions</option></select></div>
-        <div class="filter-field"><label for="tourDifficulty">Indicative level</label><select id="tourDifficulty" name="difficulty"><option value="">All levels</option></select></div>
-        <div class="filter-field"><label for="tourSort">Elevation</label><select id="tourSort" name="sort"><option value="">Recommended</option><option value="high">Highest first</option><option value="low">Lowest first</option></select></div>
-        <button class="filter-reset" type="reset">Reset filters <span aria-hidden="true">↺</span></button>
-      </form>
-      <div class="results-bar"><p id="tourResultCount" aria-live="polite">Loading journeys…</p><span>All itineraries are suggested planning estimates</span></div>
-      <div class="tour-grid tour-results" id="tourResults" aria-live="polite"><p class="loading-note">Opening the mountain tour collection…</p></div>
-    </section>
+      <section class="section tour-collection" id="tourCollection">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">PLANNING IDEAS</p>
+            <h2>Find a route into<br />the landscape.</h2>
+          </div>
+          <p class="section-intro">
+            Browse planning ideas for every mountain in our destinations guide.
+            Durations and difficulty are estimates—not confirmed trips, bookings
+            or operator offerings.
+          </p>
+        </div>
+        <form
+          class="filter-panel tour-filter-panel"
+          id="tourFilters"
+          role="search"
+        >
+          <div class="filter-field filter-search">
+            <label for="tourSearch">Search mountain</label
+            ><input
+              id="tourSearch"
+              name="q"
+              type="search"
+              placeholder="Mountain name or country"
+              autocomplete="off"
+            />
+          </div>
+          <div class="filter-field">
+            <label for="tourCountry">Country</label
+            ><select id="tourCountry" name="country">
+              <option value="">All countries</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="tourRegion">Region</label
+            ><select id="tourRegion" name="region">
+              <option value="">All regions</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="tourDifficulty">Indicative level</label
+            ><select id="tourDifficulty" name="difficulty">
+              <option value="">All levels</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="tourSort">Elevation</label
+            ><select id="tourSort" name="sort">
+              <option value="">Recommended</option>
+              <option value="high">Highest first</option>
+              <option value="low">Lowest first</option>
+            </select>
+          </div>
+          <button class="filter-reset" type="reset">
+            Reset filters <span aria-hidden="true">↺</span>
+          </button>
+        </form>
+        <div class="results-bar">
+          <p id="tourResultCount" aria-live="polite">Loading journeys…</p>
+          <span>All itineraries are suggested planning estimates</span>
+        </div>
+        <div class="tour-grid tour-results" id="tourResults" aria-live="polite">
+          <p class="loading-note">Opening the mountain tour collection…</p>
+        </div>
+      </section>
 
-    <section class="tour-detail-section section" id="tourDetail" hidden aria-live="polite"></section>
+      <section
+        class="tour-detail-section section"
+        id="tourDetail"
+        hidden
+        aria-live="polite"
+      ></section>
 
-    <section class="tour-enquiry-section" id="tourEnquiry">
-      <div class="tour-enquiry-intro">
-        <p class="eyebrow">YOUR MOUNTAIN, YOUR PLANS</p>
-        <h2>Start planning<br>the journey.</h2>
-        <p>Choose “Enquire About This Tour” on any mountain and its tour details will be selected for you. Add your preferred timing and experience so your plans are easy to review.</p>
-        <div class="enquiry-promise"><span aria-hidden="true">01</span><p>Indicative planning ideas, never a confirmed departure or booking.</p></div>
-        <div class="enquiry-promise"><span aria-hidden="true">02</span><p>High-altitude objectives require current local advice and qualified professionals.</p></div>
-      </div>
-      <form class="tour-enquiry-form" id="tourEnquiryForm">
-        <div class="tour-form-heading"><p class="eyebrow">MOUNTAIN TOUR ENQUIRY</p><h3>Tell us what you have in mind.</h3></div>
-        <input type="hidden" name="tourId">
-        <label for="selectedTour">Selected Tour <span aria-hidden="true">*</span></label>
-        <input id="selectedTour" name="selectedTour" type="text" placeholder="Choose a tour above" required readonly>
-        <div class="tour-form-row">
-          <div><label for="travellerName">Full Name <span aria-hidden="true">*</span></label><input id="travellerName" name="fullName" type="text" autocomplete="name" minlength="2" placeholder="Your name" required></div>
-          <div><label for="travellerEmail">Email Address <span aria-hidden="true">*</span></label><input id="travellerEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+      <section class="tour-enquiry-section" id="tourEnquiry">
+        <div class="tour-enquiry-intro">
+          <p class="eyebrow">YOUR MOUNTAIN, YOUR PLANS</p>
+          <h2>Start planning<br />the journey.</h2>
+          <p>
+            Select an itinerary above to fill in the form. It can help you
+            organize your questions, but enquiries are not sent to an operator.
+          </p>
+          <div class="enquiry-promise">
+            <span aria-hidden="true">01</span>
+            <p>
+              Indicative planning ideas, never a confirmed departure or booking.
+            </p>
+          </div>
+          <div class="enquiry-promise">
+            <span aria-hidden="true">02</span>
+            <p>
+              High-altitude objectives require current local advice and
+              qualified professionals.
+            </p>
+          </div>
         </div>
-        <div class="tour-form-row">
-          <div><label for="travellerPhone">Phone / WhatsApp Number <span aria-hidden="true">*</span></label><input id="travellerPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[+]?[0-9][0-9 ().-]{6,19}" title="Enter a phone number with at least 7 digits. You may include +, spaces, parentheses, dots or hyphens." placeholder="+1 555 123 4567" required></div>
-          <div><label for="travellerCount">Number of Travellers</label><input id="travellerCount" name="travellers" type="number" min="1" max="50" step="1" value="1" required></div>
-        </div>
-        <div class="tour-form-row">
-          <div><label for="travelDate">Preferred Travel Date</label><input id="travelDate" name="preferredDate" type="date"></div>
-          <div><label for="tourDuration">Indicative Tour Duration</label><input id="tourDuration" name="duration" type="text" readonly></div>
-        </div>
-        <label for="experienceLevel">Experience Level</label>
-        <select id="experienceLevel" name="experienceLevel"><option value="">Choose if known</option><option>First mountain journey</option><option>Some hiking experience</option><option>Regular trekker</option><option>Experienced mountaineer</option></select>
-        <label for="tourMessage">Message / Special Requirements</label>
-        <textarea id="tourMessage" name="message" rows="4" maxlength="1500" placeholder="Share your interests, timing or questions…"></textarea>
-        <div class="tour-form-actions">
-          <button type="submit" class="btn btn-primary">Submit Tour Enquiry <span aria-hidden="true">↗</span></button>
-          <button type="button" class="btn btn-whatsapp" data-whatsapp-enquiry>Enquire via WhatsApp <span aria-hidden="true">↗</span></button>
-        </div>
-        <p class="tour-enquiry-status" data-enquiry-status role="status" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
-  <footer class="footer"></footer>
-</body>
+        <form class="tour-enquiry-form" id="tourEnquiryForm" method="post">
+          <div class="tour-form-heading">
+            <p class="eyebrow">MOUNTAIN TOUR ENQUIRY</p>
+            <h3>Tell us what you have in mind.</h3>
+          </div>
+          <input type="hidden" name="tourId" />
+          <label for="selectedTour"
+            >Selected Tour <span aria-hidden="true">*</span></label
+          >
+          <input
+            id="selectedTour"
+            name="selectedTour"
+            type="text"
+            placeholder="Choose a tour above"
+            required
+            readonly
+          />
+          <div class="tour-form-row">
+            <div>
+              <label for="travellerName"
+                >Full Name <span aria-hidden="true">*</span></label
+              ><input
+                id="travellerName"
+                name="fullName"
+                type="text"
+                autocomplete="name"
+                minlength="2"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div>
+              <label for="travellerEmail"
+                >Email Address <span aria-hidden="true">*</span></label
+              ><input
+                id="travellerEmail"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="tour-form-row">
+            <div>
+              <label for="travellerPhone"
+                >Phone / WhatsApp Number
+                <span aria-hidden="true">*</span></label
+              ><input
+                id="travellerPhone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                inputmode="tel"
+                pattern="[+]?[0-9][0-9 ().-]{6,19}"
+                title="Enter a phone number with at least 7 digits. You may include +, spaces, parentheses, dots or hyphens."
+                placeholder="+1 555 123 4567"
+                required
+              />
+            </div>
+            <div>
+              <label for="travellerCount">Number of Travellers</label
+              ><input
+                id="travellerCount"
+                name="travellers"
+                type="number"
+                min="1"
+                max="50"
+                step="1"
+                value="1"
+                required
+              />
+            </div>
+          </div>
+          <div class="tour-form-row">
+            <div>
+              <label for="travelDate">Preferred Travel Date</label
+              ><input id="travelDate" name="preferredDate" type="date" />
+            </div>
+            <div>
+              <label for="tourDuration">Indicative Tour Duration</label
+              ><input id="tourDuration" name="duration" type="text" readonly />
+            </div>
+          </div>
+          <label for="experienceLevel">Experience Level</label>
+          <select id="experienceLevel" name="experienceLevel">
+            <option value="">Choose if known</option>
+            <option>First mountain journey</option>
+            <option>Some hiking experience</option>
+            <option>Regular trekker</option>
+            <option>Experienced mountaineer</option>
+          </select>
+          <label for="tourMessage">Message / Special Requirements</label>
+          <textarea
+            id="tourMessage"
+            name="message"
+            rows="4"
+            maxlength="1500"
+            placeholder="Share your interests, timing or questions…"
+          ></textarea>
+          <div class="tour-form-actions">
+            <button type="submit" class="btn btn-primary">
+              Check enquiry details <span aria-hidden="true">↗</span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-whatsapp"
+              data-whatsapp-enquiry
+            >
+              Enquire via WhatsApp <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p
+            class="tour-enquiry-status"
+            data-enquiry-status
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
 </html>
